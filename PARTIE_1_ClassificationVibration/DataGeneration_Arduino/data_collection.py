@@ -3,7 +3,7 @@ import csv
 import time
 
 
-ser = serial.Serial('COM3', 115200)
+ser = serial.Serial('COM3', 9900)
 time.sleep(2)  
 
 with open("vibrations.csv", "w", newline='') as file:
