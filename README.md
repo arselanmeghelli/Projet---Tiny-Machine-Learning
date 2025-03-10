@@ -1,5 +1,7 @@
 # Projet Tiny Machine Learning
 
+![DALL·E 2025-03-10 22 07 28 - A futuristic TinyML project setup featuring an Arduino Nano 33 BLE sensing vibrations with a small accelerometer module  Next to it, a compact camera ](https://github.com/user-attachments/assets/d65caabb-3160-4357-8bb6-755100cd6fbe)
+
 ## Introduction
 Ce projet explore deux partie, la premiere consiste a l'utilisation du TinyML pour la classification des vibrations et la deuxieme partie pour la classification des composants électroniques. Il repose sur l'Arduino Nano 33 BLE et TensorFlow Lite pour la détection en temps réel des vibrations, ainsi que sur une caméra et Node-RED pour l'identification des composants électroniques.
 
