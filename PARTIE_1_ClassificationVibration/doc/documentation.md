@@ -62,6 +62,8 @@ Le modèle est compilé avec l’optimiseur Adam et la fonction de perte binary_
 ### 3.Résultats et Visualisation
 Évolution de la Loss
 Les résultats d'entraînement indiquent une diminution progressive de la loss, illustrant une bonne convergence du modèle. Le graphique ci-dessous montre l'évolution de la loss sur les 50 epochs :
+![image](https://github.com/user-attachments/assets/53b38d84-0874-412e-9773-0243ec03f4d6)
+
 
 ### 4.Performance du Modèle
 À l'issue de l'entraînement, le modèle a atteint :
