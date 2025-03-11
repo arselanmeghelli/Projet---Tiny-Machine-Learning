@@ -72,3 +72,9 @@ Test Accuracy : 98.25%
 Ces résultats démontrent que le modèle est capable de bien généraliser sur des données non vues, indiquant que les caractéristiques extraites sont pertinentes pour différencier les vibrations de téléphone et de machine à laver.
 
 A la fin de l'apprentissage on a ajouté une partie qui fait l'extraction du model en format .h pour l'implémentation dans la carte Arduino.
+
+## Partie 03 : Implémentation du modèle dans la carte
+
+Dans cette partie, nous implémente le modèle dans la carte et on fait des tests, voici les résultats obtenus: 
+![Capture d’écran (1113)](https://github.com/user-attachments/assets/67ef4edb-bca8-4e86-9c56-f1bea595549d)
+
