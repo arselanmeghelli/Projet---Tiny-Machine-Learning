@@ -25,8 +25,8 @@ Format des données :
 ax, ay, az, gx, gy, gz, label
 
 Où :
-- `ax, ay, az` : accélération sur les axes X, Y, Z.
-- `gx, gy, gz` : vitesse angulaire sur les axes X, Y, Z.
+- ax, ay, az : accélération sur les axes X, Y, Z.
+- gx, gy, gz : vitesse angulaire sur les axes X, Y, Z.
 - **Label** : identifiant pour l'annotation des données en vue de l'entraînement d'un modèle de classification.
 
 L'échantillonnage est réalisé **toutes les 100 millisecondes**, soit une **fréquence de 10 Hz**.
