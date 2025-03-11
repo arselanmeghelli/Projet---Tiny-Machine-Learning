@@ -89,4 +89,4 @@ Intégration avec des systèmes de surveillance industrielle ou de maintenance p
 
 
 ## Conclusion
-Ce projet a démontré la faisabilité de l’implémentation d’un modèle de classification de vibrations sur un microcontrôleur embarqué. Grâce à l’utilisation de l’Arduino Nano 33 BLE Sense et TensorFlow Lite, nous avons pu collecter, traiter et classifier efficacement les données vibratoires. Les résultats obtenus confirment la pertinence de cette approche, ouvrant ainsi la voie à des applications industrielles et embarquées.
+Ce projet a démontré la faisabilité de l’implémentation d’un modèle de classification de vibrations sur un microcontrôleur embarqué. Grâce à l’utilisation de l’Arduino Nano 33 BLE Sense et TensorFlow Lite, nous avons pu collecter, traiter et classifier les données vibratoires. Les résultats obtenus confirment la pertinence de cette approche, ouvrant ainsi la voie à des applications industrielles et embarquées.
