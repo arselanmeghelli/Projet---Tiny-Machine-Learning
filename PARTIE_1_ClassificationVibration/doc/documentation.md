@@ -49,8 +49,8 @@ Après avoir collecté les données de vibration dans la première partie, nous 
 Avant l'entraînement, les données ont été prétraitées pour assurer une meilleure convergence du modèle. Les étapes comprennent :
 
 Normalisation : Les données ont été mises à l'échelle grâce à un StandardScaler, garantissant une distribution centrée et homogène.
+
 Séparation des données : Le dataset a été divisé en un ensemble d'entraînement (90 %) et de test (10 %) afin d'évaluer la performance du modèle sur des données non vues.
-Transformation des données : Les caractéristiques extraites du signal (éventuellement issues d’analyses temporelles ou fréquentielles) sont transformées pour être compatibles avec le modèle.
 
 ### 2.Architecture du Modèle
 Le modèle de classification est un réseau de neurones dense structuré de la manière suivante :
