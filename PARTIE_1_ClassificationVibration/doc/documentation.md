@@ -2,8 +2,6 @@
 
 Ce projet utilise l'Arduino Nano 33 BLE Sense pour collecter des données de vibrations en temps réel à l'aide de son capteur embarqué **LSM9DS1**. L'objectif est de fournir des données exploitables pour l'entraînement d'un modèle d'intelligence artificielle en classification de vibrations.
 
----
-
 ## 1. Initialisation et Configuration du Capteur
 
 Au démarrage du microcontrôleur, la communication avec le capteur de mouvements **LSM9DS1** est établie. Ce capteur intègre :
@@ -11,8 +9,6 @@ Au démarrage du microcontrôleur, la communication avec le capteur de mouvement
 - **Un gyroscope** qui mesure la vitesse angulaire sur ces mêmes axes.
 
 Si l'initialisation échoue, le programme affiche un message d'erreur et s'interrompt pour éviter une collecte incorrecte des données.
-
----
 
 ## 2. Lecture des Données du Capteur
 
@@ -22,16 +18,13 @@ Le système effectue une **lecture continue** des mesures fournies par le capteu
 
 Avant chaque lecture, le programme vérifie la disponibilité de nouvelles mesures afin d'assurer l'intégrité des données collectées.
 
----
-
 ## 3. Enregistrement et Format des Données
 
 Une fois les données extraites, elles sont transmises au **port série** sous forme de valeurs séparées par des virgules (**CSV**). Ce format facilite leur stockage et leur exploitation dans des logiciels d'analyse ou de machine learning.
 
 Format des données :
-```csv
 ax, ay, az, gx, gy, gz, label
-```
+
 Où :
 - `ax, ay, az` : accélération sur les axes X, Y, Z.
 - `gx, gy, gz` : vitesse angulaire sur les axes X, Y, Z.
@@ -39,9 +32,19 @@ Où :
 
 L'échantillonnage est réalisé **toutes les 100 millisecondes**, soit une **fréquence de 10 Hz**.
 
----
+## 4. Collecte et Sauvegarde des Données avec Python
 
-## 4. Objectif et Exploitation des Données
+Un script Python est utilisé pour **collecter les données envoyées par l'Arduino via le port série** et les enregistrer sous forme de fichier **Excel**.
+
+### Étapes du processus :
+1. Connexion au **port série** avec une vitesse de transmission de **115200 bauds**.
+2. Lecture continue des données envoyées par l'Arduino pendant une **durée définie** (ex: 30 secondes).
+3. Vérification et stockage des données sous forme de **DataFrame Pandas**.
+4. Sauvegarde des mesures sous un **fichier Excel (`donnees_vibrations.xlsx`)** pour une analyse ultérieure.
+
+Ce fichier pourra ensuite être exploité pour des **analyses statistiques, des visualisations et l'entraînement du modèle de classification.**
+
+## 5. Objectif et Exploitation des Données
 
 Les données collectées serviront à entraîner un modèle de machine learning capable de classifier les vibrations (état normal, anomalie, etc.).
 
@@ -52,11 +55,7 @@ Les données collectées serviront à entraîner un modèle de machine learning 
 
 Cette approche permet d'implémenter une **solution de maintenance prédictive** ou de **surveillance des vibrations** dans divers contextes industriels.
 
----
-
 ### :gear: **Prérequis Matériels et Logiciels**
 - **Arduino Nano 33 BLE Sense**
 - **Arduino IDE** avec la bibliothèque `Arduino_LSM9DS1`
-- **Python (optionnel)** pour le traitement des données
-
-**Prochaine étape :** Prétraitement des données et entraînement du modèle de classification.
+- **Python avec Pandas** pour le traitement des données
