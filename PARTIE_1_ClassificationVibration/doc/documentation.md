@@ -39,3 +39,34 @@ Un script Python est utilisé pour **collecter les données envoyées par l'Ardu
 4. Sauvegarde des mesures sous un **fichier Excel (`donnees_vibrations.xlsx`)** pour une analyse ultérieure.
 
 ## Partie 02 : Apprentissage de modèle d'IA
+
+### 1.Introduction
+Après avoir collecté les données de vibration dans la première partie, nous abordons ici la phase d’apprentissage. L'objectif est de construire un modèle capable de classer les signaux de vibration en deux catégories : vibration de téléphone et vibration de machine à laver. Pour cela, nous avons utilisé TensorFlow et Keras afin de développer un réseau de neurones dense adapté à notre problème de classification.
+
+### 2.Prétraitement des Données
+Avant l'entraînement, les données ont été prétraitées pour assurer une meilleure convergence du modèle. Les étapes comprennent :
+
+Normalisation : Les données ont été mises à l'échelle grâce à un StandardScaler, garantissant une distribution centrée et homogène.
+Séparation des données : Le dataset a été divisé en un ensemble d'entraînement (90 %) et de test (10 %) afin d'évaluer la performance du modèle sur des données non vues.
+Transformation des données : Les caractéristiques extraites du signal (éventuellement issues d’analyses temporelles ou fréquentielles) sont transformées pour être compatibles avec le modèle.
+
+### 2.Architecture du Modèle
+Le modèle de classification est un réseau de neurones dense structuré de la manière suivante :
+
+Couche d'entrée : Accepte en entrée les caractéristiques prétraitées (nombre de features déterminé par le dataset).
+Deux couches cachées : Chacune composée de 16 neurones et utilisant l'activation ReLU pour capter des relations non linéaires.
+Couche intermédiaire : Une couche dense de 8 neurones pour raffiner l'extraction des caractéristiques.
+Couche de sortie : Une unique neurone avec une activation sigmoïde pour la classification binaire.
+Le modèle est compilé avec l’optimiseur Adam et la fonction de perte binary_crossentropy. Il a été entraîné sur 50 epochs avec une taille de batch de 20.
+
+### 3.Résultats et Visualisation
+Évolution de la Loss
+Les résultats d'entraînement indiquent une diminution progressive de la loss, illustrant une bonne convergence du modèle. Le graphique ci-dessous montre l'évolution de la loss sur les 50 epochs :
+
+### 4.Performance du Modèle
+À l'issue de l'entraînement, le modèle a atteint :
+Test Loss : 0.0289
+Test Accuracy : 98.25%
+Ces résultats démontrent que le modèle est capable de bien généraliser sur des données non vues, indiquant que les caractéristiques extraites sont pertinentes pour différencier les vibrations de téléphone et de machine à laver.
+
+A la fin de l'apprentissage on a ajouté une partie qui fait l'extraction du model en format .h pour l'implémentation dans la carte Arduino.
