@@ -1,3 +1,5 @@
+# Documentation
+
 ## Partie 01 : Acquisition et Enregistrement des Données de Vibration
 
 Ce projet utilise l'Arduino Nano 33 BLE Sense pour collecter des données de vibrations en temps réel à l'aide de son capteur embarqué **LSM9DS1**. L'objectif est de fournir des données exploitables pour l'entraînement d'un modèle d'intelligence artificielle en classification de vibrations.
@@ -76,5 +78,15 @@ A la fin de l'apprentissage on a ajouté une partie qui fait l'extraction du mod
 ## Partie 03 : Implémentation du modèle dans la carte
 
 Dans cette partie, nous implémente le modèle dans la carte et on fait des tests, voici les résultats obtenus: 
-![Capture d’écran (1113)](https://github.com/user-attachments/assets/67ef4edb-bca8-4e86-9c56-f1bea595549d)
+![Capture d’écran (1113) (2)](https://github.com/user-attachments/assets/3a00e09f-39a5-42e3-a7d9-7841c2edf813)
 
+## Propositions pour les Travaux Futurs
+Optimisation du modèle pour réduire l’empreinte mémoire et améliorer la rapidité d’exécution.
+Augmentation de la fréquence d’échantillonnage et ajout d'autres capteurs pour enrichir les données.
+Extension du dataset avec de nouvelles catégories de vibrations pour améliorer la robustesse du modèle.
+Développement d’une interface en temps réel pour la visualisation et l’analyse des vibrations.
+Intégration avec des systèmes de surveillance industrielle ou de maintenance prédictive.
+
+
+## Conclusion
+Ce projet a démontré la faisabilité de l’implémentation d’un modèle de classification de vibrations sur un microcontrôleur embarqué. Grâce à l’utilisation de l’Arduino Nano 33 BLE Sense et TensorFlow Lite, nous avons pu collecter, traiter et classifier efficacement les données vibratoires. Les résultats obtenus confirment la pertinence de cette approche, ouvrant ainsi la voie à des applications industrielles et embarquées.
